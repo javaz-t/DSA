@@ -5,13 +5,12 @@ class Solution(object):
         while(r<len(prices)):
             if prices[r]>prices[l]:
                 #profit
-                profit=max(profit,prices[r]-prices[l])
-                r+=1
-            
+                profit=max(profit,prices[r]-prices[l])            
             else:
                 #loss
                 l=r
-                r+=1
+            #no matter waht need to mov e the right 
+            r+=1
         return profit 
 
 
