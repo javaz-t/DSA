@@ -1,15 +1,19 @@
 class Solution(object):
     def maxSubArray(self, nums):
-        current_sum = nums[0]        # start with first element
-        max_sum = nums[0]            # initialize max with first element
-
-        for num in nums[1:]:         # iterate from second element
-            # Decide: extend current subarray OR start fresh
-            current_sum = max(num, current_sum + num)
-            # Update global max
-            max_sum = max(max_sum, current_sum)
-
-        return max_sum
-
+        total = 0
+        sum =0
+        if(len(nums)==1):
+            return nums[0]
+        if all(n<0 for n in nums):
+            return max(nums)
+        for i in range(0,len(nums) ):
+            if(i==0):
+                total=nums[0]
+            sum+=nums[i]
+            if(sum<0):
+                sum=0
+            if(sum>total):
+                total=sum
+        return total
         
         
