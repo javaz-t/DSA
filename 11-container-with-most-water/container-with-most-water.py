@@ -6,10 +6,8 @@ class Solution(object):
             if height[left] > height[right]:
                 area = height[right] * (right - left)  
                 right = right - 1
-                #total =max(total,area)
             else:
                 area = height[left] * (right - left)
                 left = left + 1
-                #total =max(total,area)
             total =max(total,area)
         return total
