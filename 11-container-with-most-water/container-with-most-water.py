@@ -5,9 +5,9 @@ class Solution(object):
         while left < right:
             if height[left] > height[right]:
                 area = height[right] * (right - left)  
-                right = right - 1
+                right -= 1
             else:
                 area = height[left] * (right - left)
-                left = left + 1
+                left +=  1
             total =max(total,area)
         return total
