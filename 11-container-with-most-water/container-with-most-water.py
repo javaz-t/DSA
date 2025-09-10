@@ -3,12 +3,13 @@ class Solution(object):
         total = 0    
         left, right = 0, len(height) - 1
         while left < right:
-            area = min(height[left], height[right]) * (right - left)  
-            total = max(total, area)  
             if height[left] > height[right]:
                 area = height[right] * (right - left)  
                 right = right - 1
+                #total =max(total,area)
             else:
-                area = height[right] * (right - left)
+                area = height[left] * (right - left)
                 left = left + 1
+                #total =max(total,area)
+            total =max(total,area)
         return total
