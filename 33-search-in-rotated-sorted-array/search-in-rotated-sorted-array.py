@@ -16,7 +16,7 @@ class Solution(object):
                     l = m + 1
             # Right half is sorted
             else:
-                if nums[m] < target <= nums[r]:
+                if nums[m] <= target <= nums[r]:
                     l = m + 1
                 else:
                     r = m - 1
