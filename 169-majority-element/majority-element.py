@@ -3,7 +3,7 @@
 class Solution:
     def majorityElement(self, nums):
         result = {}
-        for i, x in enumerate(nums):
+        for   x in  nums :
             if x in result:
                 result[x] = result[x] + 1
             else:
